@@ -28,8 +28,8 @@ def myAtoi(self, s: str) -> int:
             int_value = int_value * -1
         if int_value > (2 ** 31 - 1):
             return 2 ** 31 - 1
-        if int_value < (-2 ** 31):
-            return -2 ** 31
+        if int_value < (-(2 ** 31)):
+            return -(2 ** 31)
         return int_value
     else:
         return 0

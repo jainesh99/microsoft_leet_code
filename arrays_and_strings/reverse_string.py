@@ -3,7 +3,7 @@ from typing import List
 
 def reverseString(s: List[str]) -> None:
     start_pointer = 0
-    end_pointer = len(s)-1
+    end_pointer = len(s) - 1
 
     while start_pointer < end_pointer:
         print(f"Start Pointer {start_pointer} and End Pointer {end_pointer}")

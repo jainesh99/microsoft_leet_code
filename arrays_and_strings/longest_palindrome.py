@@ -1,6 +1,7 @@
 def longestPalindrome(s: str) -> str:
     longest_palindrome = ""
     increment = 2
+    known_values = {}
 
     if s == s[::-1]:
         return s
@@ -12,6 +13,7 @@ def longestPalindrome(s: str) -> str:
     for x in range(0, len(s)):
         for y in range(x + increment, len(s) + 1):
             cut_string = s[x:y]
+
             reverse_string = cut_string[::-1]
 
             if cut_string == reverse_string and len(cut_string) > len(

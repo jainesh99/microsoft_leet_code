@@ -46,6 +46,7 @@ class LinkedList:
 
         if self.head == self.tail:
             self.head = self.tail = None
+            # Can also just return remove_first() has the same effect
             return None
         else:
             previous = None

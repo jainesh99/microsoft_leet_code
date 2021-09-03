@@ -32,6 +32,9 @@ class LinkedList:
 
     def remove_first(self):
 
+        if not self.head:
+            return None
+
         if self.head.next:
             temp = self.head.data
             self.head = self.head.next
@@ -39,6 +42,30 @@ class LinkedList:
             return temp
         else:
             self.head = None
+            self.current_size = 0
+            return None
+
+    def remove_last(self):
+
+        if not self.head:
+            return None
+
+        if self.head.next:
+            previous = None
+            current = self.head
+
+            while current.next:
+                previous = current
+                current = current.next
+
+            temp = current.data
+            previous.next = None
+            self.current_size -= 1
+
+            return temp
+        else:
+            self.head = None
+            self.current_size = 0
             return None
 
     def print(self):
@@ -60,5 +87,5 @@ l = LinkedList()
 l.add_first(n1)
 l.add_first(n2)
 l.print()
-l.remove_first()
+l.remove_last()
 l.print()

@@ -52,15 +52,14 @@ class LinkedList:
             previous = None
             current = self.head
 
-            while current.next:
+            while current.next:  # Can also do while current != tail
                 previous = current
                 current = current.next
 
-            temp = current.data
             previous.next = None
             self.tail = previous
             self.current_size -= 1
-            return temp
+            return current.data
 
     def print(self):
         temp = self.head

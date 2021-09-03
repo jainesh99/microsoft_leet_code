@@ -58,11 +58,10 @@ class LinkedList:
                 previous = current
                 current = current.next
 
-            temp = current.data
             previous.next = None
             self.current_size -= 1
 
-            return temp
+            return current.data
         else:
             self.head = None
             self.current_size = 0

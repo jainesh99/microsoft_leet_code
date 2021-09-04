@@ -67,6 +67,42 @@ class LinkedList:
             self.current_size = 0
             return None
 
+    def remove(self, value):
+
+        if not self.head:
+            return None
+
+        if value == self.head.data:
+            return self.remove_first()
+
+        previous = None
+        current = self.head
+
+        while current and current.data != value:
+            previous = current
+            current = current.next
+
+        if current:
+            previous.next = current.next
+            self.current_size -= 1
+
+    def find(self, value):
+
+        if not self.head:
+            return False
+
+        if value == self.head.data:
+            return True
+
+        current = self.head
+
+        while current:
+            if value == current.data:
+                return True
+            current = current.next
+
+        return False
+
     def print(self):
         temp = self.head
 
@@ -85,6 +121,6 @@ n3 = Node(3)
 l = LinkedList()
 l.add_first(n1)
 l.add_first(n2)
+l.add_last(n3)
 l.print()
-l.remove_last()
-l.print()
+print(l.find(3))

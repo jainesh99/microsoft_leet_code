@@ -103,6 +103,18 @@ class LinkedList:
 
         return False
 
+    def peak_first(self):
+        if self.head:
+            return self.head.data
+        else:
+            return None
+
+    def peak_last(self):
+        if self.tail:
+            return self.tail.data
+        else:
+            return None
+
     def print(self):
         temp = self.head
 
@@ -124,4 +136,4 @@ l.add_first(n1)
 l.add_last(n2)
 l.add_last(n3)
 l.print()
-print(l.find(4))
+print(l.peak_last())

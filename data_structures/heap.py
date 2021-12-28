@@ -2,7 +2,6 @@ import math
 
 
 class Heap:
-
     def __init__(self):
         self._last_position = 0
         self._arr_heap = []
@@ -18,7 +17,7 @@ class Heap:
 
     def trickle_up(self):
 
-        parent_index = math.floor((self._last_position-1)/2)
+        parent_index = math.floor((self._last_position - 1) / 2)
         child_index = self._last_position
 
         while self._arr_heap[parent_index] < self._arr_heap[child_index]:
@@ -29,7 +28,7 @@ class Heap:
             self._arr_heap[parent_index] = child_value
 
             child_index = parent_index
-            parent_index = math.floor((child_index-1)/2)
+            parent_index = math.floor((child_index - 1) / 2)
 
             if parent_index < 0:
                 parent_index = 0

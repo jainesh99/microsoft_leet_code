@@ -1,12 +1,10 @@
 class Node:
-
     def __init__(self, data):
         self.data = data
         self.left, self.right = None, None
 
 
 class Tree:
-
     def __init__(self):
         self._root = None
 
@@ -75,8 +73,6 @@ class Tree:
                 temp = node.right
                 node = None
                 return temp
-
-            
 
 
 temp_tree = Tree()

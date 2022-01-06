@@ -1,6 +1,7 @@
 import collections
 import string
 
+
 class Solution:
     def uniqueLetterString(self, s: str) -> int:
         index = {c: [-1, -1] for c in string.ascii_uppercase}

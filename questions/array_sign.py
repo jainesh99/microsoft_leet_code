@@ -4,18 +4,19 @@ from typing import List
 class Solution:
     def arraySign(self, nums: List[int]) -> int:
 
-        product = 1
+        negative_count = 0
 
         for num in nums:
             if num == 0:
                 return 0
-            product = product * num
+            elif num <= 0:
+                negative_count += 1
 
-        if product > 0:
+        if negative_count % 2 == 0:
             return 1
         else:
             return -1
 
 
 solution = Solution()
-print(solution.arraySign([1, 2, 0, 4, 5]))
+print(solution.arraySign([1, -2, -1, 4, 5]))

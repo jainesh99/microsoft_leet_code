@@ -17,6 +17,7 @@ class Solution(object):
 
         return total_binary_substrings
 
+
 solution = Solution()
 solution.countBinarySubstrings("00110011")
 

@@ -4,11 +4,10 @@ from heapq import heapify, heappop, heappush
 
 class Solution:
     def maxProfit(self, inventory: List[int], orders: int) -> int:
-
         def sf(a, b):
             return (a * (a + 1) - b * (b + 1)) // 2
 
-        inventory.sort(reverse=True) # Use a heap also could work better
+        inventory.sort(reverse=True)  # Use a heap also could work better
         inventory.append(0)
         total, index, repeats = 0, 0, 0
 
@@ -54,6 +53,6 @@ class Solution:
 
 
 solution = Solution()
-inventory = [3,5]
+inventory = [3, 5]
 orders = 6
 print(solution.maxProfit(inventory, orders))

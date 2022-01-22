@@ -1,6 +1,7 @@
 from typing import List
 from heapq import heapify, heappop, heappush
 
+
 class Solution:
     def connectSticks(self, sticks: List[int]) -> int:
         cost = 0
@@ -24,5 +25,5 @@ class Solution:
 
 
 solution = Solution()
-sticks = [2,4,3]
+sticks = [2, 4, 3]
 print(solution.connectSticks(sticks))

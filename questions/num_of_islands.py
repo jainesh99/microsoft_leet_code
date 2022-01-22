@@ -22,7 +22,7 @@ class Solution:
             for j in range(len(grid[0])):
                 if grid[i][j] == "1":
                     answer += 1
-                    queue = deque([(i, j)])
+                    queue = deque([(i, j)])  # Can use normal queue as well!
                     while queue:
                         row, column = queue.popleft()
                         if grid[row][column] == "0":

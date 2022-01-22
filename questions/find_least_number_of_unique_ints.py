@@ -1,6 +1,7 @@
 from typing import List
 from collections import defaultdict
 
+
 class Solution:
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
 
@@ -12,7 +13,9 @@ class Solution:
         if k == 0:
             return len(counter_dict)
 
-        counter_tuple = sorted(counter_dict.items(), key=lambda item:item[1], reverse=True)
+        counter_tuple = sorted(
+            counter_dict.items(), key=lambda item: item[1], reverse=True
+        )
 
         while k > 0:
 
@@ -28,6 +31,6 @@ class Solution:
 
 
 solution = Solution()
-arr = [4,3,1,1,3,3,2]
+arr = [4, 3, 1, 1, 3, 3, 2]
 k = 3
 print(solution.findLeastNumOfUniqueInts(arr, k))

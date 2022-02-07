@@ -10,6 +10,7 @@
 
 # e.g. you can make 5 with 3 2-sided dice with [2][3] 3(2 ways) + 2 and [2][4] 4(1 way) + 1 or 3 total ways. All values for the previous dice less than target - max face value (or 5 - 3 in this exmaple) can be ignored since it is impossible to produce the target with these values
 
+
 class Solution:
     def numRollsToTarget(self, n: int, k: int, target: int) -> int:
         table = [[0] * (target + 1) for _ in range(n + 1)]
@@ -20,6 +21,10 @@ class Solution:
             # can ignore all targets that are less than the number of currently available dice which is why we can start with 'dice'
             for ways in range(dice, len(table[0])):
                 table[dice][ways] = sum(
-                    [table[dice - 1][validPrevDiceWays] for validPrevDiceWays in range(max(ways - k, 0), ways)])
+                    [
+                        table[dice - 1][validPrevDiceWays]
+                        for validPrevDiceWays in range(max(ways - k, 0), ways)
+                    ]
+                )
 
         return table[-1][-1] % (10 ** 9 + 7)

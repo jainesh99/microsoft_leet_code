@@ -1,8 +1,8 @@
 from typing import List
 
+
 class Solution:
     def countCharacters(self, words: List[str], chars: str) -> int:
-
         def generate_dict(word: str):
             result_dictionary = {}
 
@@ -36,8 +36,7 @@ class Solution:
         return counter
 
 
-
 solution = Solution()
-words = ["hello","world","leetcode"]
+words = ["hello", "world", "leetcode"]
 chars = "welldonehoneyr"
 print(solution.countCharacters(words, chars))

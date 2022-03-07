@@ -26,7 +26,7 @@ class Solution:
             heappush(min_heap, nums[i])
             heappush(max_heap, -nums[i])
 
-            for j in range(i+1, len(nums)):
+            for j in range(i + 1, len(nums)):
 
                 heappush(min_heap, nums[j])
                 heappush(max_heap, -nums[j])
@@ -35,6 +35,7 @@ class Solution:
 
         return sum_array_ranges
 
+
 solution = Solution()
-nums = [1,2,3]
+nums = [1, 2, 3]
 print(solution.subArrayRanges(nums))

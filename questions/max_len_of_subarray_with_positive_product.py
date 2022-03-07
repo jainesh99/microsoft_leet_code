@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
 
@@ -59,5 +60,5 @@ class Solution:
 
 
 solution = Solution()
-nums = [0,1,-2,-3,-4]
+nums = [0, 1, -2, -3, -4]
 print(solution.getMaxLen(nums))

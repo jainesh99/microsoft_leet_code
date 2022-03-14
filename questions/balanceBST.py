@@ -1,6 +1,5 @@
 class Solution:
     def balanceBST(self, root: TreeNode) -> TreeNode:
-
         def inorderTraverse(node, nodeList):
             if node:
                 inorderTraverse(node.left, nodeList)

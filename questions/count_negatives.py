@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def countNegatives(self, grid: List[List[int]]) -> int:
 
@@ -20,5 +21,5 @@ class Solution:
 
 
 solution = Solution()
-grid = [[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]
+grid = [[4, 3, 2, -1], [3, 2, 1, -1], [1, 1, -1, -2], [-1, -1, -2, -3]]
 print(solution.countNegatives(grid))

@@ -1,4 +1,4 @@
-from heapq import heappush, heappop, heapify
+from heapq import heapify, heappop, heappush
 
 
 def heapsort(iterable):

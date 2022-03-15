@@ -1,5 +1,5 @@
+from heapq import heapify, heappop
 from typing import List
-from heapq import heappop, heapify
 
 
 class Solution:

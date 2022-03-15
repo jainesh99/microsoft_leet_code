@@ -1,5 +1,5 @@
-from typing import List
 from queue import PriorityQueue
+from typing import List
 
 
 class Solution:

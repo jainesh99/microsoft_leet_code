@@ -1,5 +1,5 @@
-from typing import List
 import itertools
+from typing import List
 
 # class Solution:
 #     def generate_patterns(self,websites: List[str]):

@@ -57,19 +57,46 @@ class Solution:
     def suggestedProducts(
         self, products: List[str], searchWord: str
     ) -> List[List[str]]:
-        trie = Trie()
-        suggested_products = []
+        # trie = Trie()
+        # suggested_products = []
+        #
+        # for product in products:
+        #     trie.insert(product)
+        #
+        # for i in range(1, len(searchWord) + 1):
+        #     output = ["".join(item) for item in trie.search(searchWord[:i])]
+        #
+        #     suggested_products.append(output[:3])
+        # print(suggested_products)
+        #
+        # return suggested_products
 
-        for product in products:
-            trie.insert(product)
+        res = []
+        # Initializing empty string temp
+        temp = ""
 
-        for i in range(1, len(searchWord) + 1):
-            output = ["".join(item) for item in trie.search(searchWord[:i])]
+        # Sorting the list
+        products.sort()
 
-            suggested_products.append(output[:3])
-        print(suggested_products)
+        # Looping through searchWord
+        for word in searchWord:
+            # Adding each character of searchWord to temp every iteration
+            temp += word
+            # Initialzing another empty list to keep the matching products
+            res_inner = []
+            # Looping through the products
+            for j in range(len(products)):
+                # Comparing the product upto the same length as temp instead of finding it in the entire product string
+                if products[j][: len(temp)] == temp:
+                    # Appending the found product to the inner list
+                    res_inner.append(products[j])
 
-        return suggested_products
+            # Only considering lexicographically top 3 elements
+            res.append(res_inner[:3])
+            # Updating the products list to inner list to reduce the search space
+            products = res_inner
+
+        return res
 
 
 solution = Solution()

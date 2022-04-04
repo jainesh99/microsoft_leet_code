@@ -26,12 +26,13 @@ class Solution:
             if char == "1":
                 one_count += 1
             else:
-                flip_count += 1
+                if one_count >= 1:
+                    flip_count += 1
             flip_count = min(one_count, flip_count)
 
         return flip_count
 
 
 solution = Solution()
-print(solution.minFlipsMonoIncr("00110"))
+print(solution.minFlipsMonoIncr("010110"))
 # print(solution.is_monochrome("00111"))

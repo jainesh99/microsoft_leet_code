@@ -4,17 +4,20 @@ from typing import List
 
 class Solution:
     def sumSubarrayMins(self, arr: List[int]) -> int:
-
-        arr = [0] + arr
-        result = [0] * len(arr)
-        stack = [0]
-        for i in range(len(arr)):
-            while arr[stack[-1]] > arr[i]:
-                stack.pop()
-            j = stack[-1]
-            result[i] = result[j] + (i - j) * arr[i]
+        """
+        :type arr: List[int]
+        :rtype: int
+        """
+        su = 0
+        arr.append(0)
+        stack = [-1]
+        for i, num in enumerate(arr):
+            # maintain an non-decreasing stack
+            while stack and arr[stack[-1]] > num:  # (i)
+                idx = stack.pop()
+                su += arr[idx] * (i - idx) * (idx - stack[-1])
             stack.append(i)
-        return sum(result) % (10 ** 9 + 7)
+        return su % (10 ** 9 + 7)
 
 
 solution = Solution()

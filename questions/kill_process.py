@@ -17,10 +17,11 @@ class Solution:
         while kill_queue:
 
             index_to_kill = kill_queue.popleft()
-            response.append(pid[index_to_kill])
+            pid_to_kill = pid[index_to_kill]
+            response.append(pid_to_kill)
 
-            if len(ppid_index[pid[index_to_kill]]) > 0:
-                for j in ppid_index[pid[index_to_kill]]:
+            if len(ppid_index[pid_to_kill]) > 0:
+                for j in ppid_index[pid_to_kill]:
                     kill_queue.append(j)
 
         return response

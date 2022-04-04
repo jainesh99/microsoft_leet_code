@@ -23,5 +23,5 @@ class Solution:
 
 
 solution = Solution()
-intervals = [[13, 15], [1, 13]]
+intervals = [[0, 30], [5, 10], [15, 20]]
 print(solution.minMeetingRooms(intervals))

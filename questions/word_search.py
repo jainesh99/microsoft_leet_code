@@ -109,6 +109,6 @@ class Solution(object):
 
 
 solution = Solution()
-board = [["C", "A", "A"], ["A", "A", "A"], ["B", "C", "D"]]
-word = "AAB"
+board = [["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]]
+word = "ABCCED"
 print(solution.exist(board, word))

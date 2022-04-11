@@ -27,4 +27,4 @@ class Solution:
                     ]
                 )
 
-        return table[-1][-1] % (10 ** 9 + 7)
+        return table[-1][-1] % (10**9 + 7)

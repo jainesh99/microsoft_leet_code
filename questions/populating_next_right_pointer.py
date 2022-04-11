@@ -21,7 +21,7 @@ class Solution:
 
         while queue:
 
-            number_of_items_needed = 2 ** level
+            number_of_items_needed = 2**level
 
             if len(queue) == number_of_items_needed:
 

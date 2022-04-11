@@ -23,10 +23,10 @@ class Solution:
                 c = (orders - r) // repeats  # Fully filled columns
                 s = sf(inventory[index], inventory[index] - c)
                 total += repeats * s + (inventory[index] - c) * r
-                return total % (10 ** 9 + 7)
+                return total % (10**9 + 7)
             index += 1
 
-        return total % (10 ** 9 + 7)
+        return total % (10**9 + 7)
 
         # def get_natural_number_sum(start, end):
         #

@@ -17,7 +17,7 @@ class Solution:
                 idx = stack.pop()
                 su += arr[idx] * (i - idx) * (idx - stack[-1])
             stack.append(i)
-        return su % (10 ** 9 + 7)
+        return su % (10**9 + 7)
 
 
 solution = Solution()

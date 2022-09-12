@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import Dict, List
 
 
 def best_sum(target_sum: int, numbers: List[int], memo: [Dict] = None) -> List[int]:

@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import Dict, List
 
 
 def how_sum(targetSum: int, numbers: List[int], memo: Dict = None):

@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import Dict, List
 
 
 def count_construct(target: str, word_bank: List[str], memo: Dict = None):

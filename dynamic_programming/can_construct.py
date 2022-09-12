@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import Dict, List
 
 
 def can_construct(target: str, wordbank: List[str], memo: Dict = None):

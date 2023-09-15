@@ -7,7 +7,7 @@ class Solution:
         current_min = prices[0]
         max_profit = 0
 
-        for index in range(1,len(prices)):
+        for index in range(1, len(prices)):
 
             price = prices[index]
 
@@ -20,10 +20,6 @@ class Solution:
         return max_profit
 
 
-
-
-
-
-prices = [7,6,4,3,1]
+prices = [7, 6, 4, 3, 1]
 solution = Solution()
 print(solution.maxProfit(prices))

@@ -3,7 +3,6 @@ from typing import List
 
 class Solution:
     def getModifiedArray(self, length: int, updates: List[List[int]]) -> List[int]:
-
         # modified_array = [0] * length
         #
         # for update in updates:

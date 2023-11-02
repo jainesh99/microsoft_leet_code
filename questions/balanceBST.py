@@ -7,7 +7,6 @@ class Solution:
                 inorderTraverse(node.right, nodeList)
 
         def buildBST(nodeList, left, right):
-
             if left > right:
                 return None
             mid = (left + right) // 2

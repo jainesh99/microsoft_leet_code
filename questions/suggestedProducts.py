@@ -3,7 +3,6 @@ from typing import List
 
 class TrieNode:
     def __init__(self, char):
-
         self.char = char
         self.end_of_word = False
         self.children = {}
@@ -14,11 +13,9 @@ class Trie:
         self.root = TrieNode("")
 
     def insert(self, word):
-
         node = self.root
 
         for char in word:
-
             if node.children.get(char):
                 node = node.children.get(char)
             else:
@@ -29,7 +26,6 @@ class Trie:
         node.end_of_word = True
 
     def dfs(self, node, pre):
-
         if node.end_of_word:
             self.word.append((pre + node.char))
 
@@ -37,14 +33,12 @@ class Trie:
             self.dfs(child, pre + node.char)
 
     def search(self, chars):
-
         node = self.root
 
         for char in chars:
             if node.children.get(char):
                 node = node.children.get(char)
             else:
-
                 return []
 
         self.word = []

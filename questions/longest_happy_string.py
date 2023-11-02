@@ -20,7 +20,6 @@ class Solution:
         false_counter = 0
 
         while not found:
-
             for index, value in enumerate(letter_list):
                 if value[1] > 0:
                     if can_be_added(happy_string, value[0]):

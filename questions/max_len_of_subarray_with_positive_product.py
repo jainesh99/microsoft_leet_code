@@ -3,7 +3,6 @@ from typing import List
 
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
-
         # if len(nums) == 1:
         #     if nums[0] > 0:
         #         return 1
@@ -39,7 +38,6 @@ class Solution:
         max_length = 0
 
         for index, num in enumerate(nums):
-
             if num < 0:
                 number_of_negative_values += 1
 

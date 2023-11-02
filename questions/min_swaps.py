@@ -3,7 +3,6 @@ from typing import List
 
 class Solution:
     def minSwaps(self, data: List[int]) -> int:
-
         number_of_ones = data.count(1)
 
         if number_of_ones == 1:
@@ -29,7 +28,6 @@ class Solution:
             number_of_ones_in_window += num
 
             if len(window) == number_of_ones:
-
                 if number_of_ones_in_window > max_number_of_ones_in_window:
                     max_number_of_ones_in_window = number_of_ones_in_window
 

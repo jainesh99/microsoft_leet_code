@@ -4,18 +4,15 @@ from typing import List
 
 class Solution:
     def killProcess(self, pid: List[int], ppid: List[int], kill: int) -> List[int]:
-
         ppid_index = defaultdict(list)
 
         for index, value in enumerate(ppid):
-
             ppid_index[value].append(index)
 
         kill_queue = deque(ppid_index[kill])
         response = [kill]
 
         while kill_queue:
-
             index_to_kill = kill_queue.popleft()
             pid_to_kill = pid[index_to_kill]
             response.append(pid_to_kill)

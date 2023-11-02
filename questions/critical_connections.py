@@ -19,7 +19,6 @@ class Solution:
         res = []
 
         def dfs(node, parent, timer):
-
             nonlocal low, graph, res, visited
 
             low[node] = timer
@@ -27,7 +26,6 @@ class Solution:
             visited.add(node)
 
             for child in graph[node]:
-
                 if child == parent:
                     continue
                 if child not in visited:

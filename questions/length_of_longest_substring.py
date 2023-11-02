@@ -1,6 +1,5 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-
         if not s:
             return 0
 
@@ -13,13 +12,11 @@ class Solution:
         index = 0
 
         while index != len(s):
-
             if unique.get(s[index]) is None:
                 unique[s[index]] = index
                 substring = substring + s[index]
                 index += 1
             else:
-
                 if len(substring) > max_length:
                     max_length = len(substring)
 

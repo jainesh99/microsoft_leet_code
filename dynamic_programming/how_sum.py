@@ -2,7 +2,6 @@ from typing import Dict, List
 
 
 def how_sum(targetSum: int, numbers: List[int], memo: Dict = None):
-
     if memo is None:
         memo = {}
 
@@ -16,11 +15,9 @@ def how_sum(targetSum: int, numbers: List[int], memo: Dict = None):
         return None
 
     for number in numbers:
-
         return_arr = how_sum(targetSum - number, numbers, memo)
 
         if return_arr is not None:
-
             return_arr.append(number)
             memo[targetSum] = return_arr
             return memo[targetSum]

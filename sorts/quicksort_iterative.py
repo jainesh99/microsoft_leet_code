@@ -1,5 +1,6 @@
 # Python program for implementation of Quicksort
 
+
 # This function is same in both iterative and recursive
 def partition(arr, l, h):
     i = l - 1
@@ -7,7 +8,6 @@ def partition(arr, l, h):
 
     for j in range(l, h):
         if arr[j] <= x:
-
             # increment index of smaller element
             i = i + 1
             arr[i], arr[j] = arr[j], arr[i]
@@ -21,7 +21,6 @@ def partition(arr, l, h):
 # l --> Starting index,
 # h --> Ending index
 def quickSortIterative(arr, l, h):
-
     # Create an auxiliary stack
     size = h - l + 1
     stack = [0] * (size)
@@ -37,7 +36,6 @@ def quickSortIterative(arr, l, h):
 
     # Keep popping from stack while is not empty
     while top >= 0:
-
         # Pop h and l
         h = stack[top]
         top = top - 1

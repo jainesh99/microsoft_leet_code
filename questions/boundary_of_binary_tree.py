@@ -12,7 +12,6 @@ class TreeNode:
 
 class Solution:
     def boundaryOfBinaryTree(self, root: Optional[TreeNode]) -> List[int]:
-
         # level_order_queue = deque([root, None])
         # level_dict = defaultdict(list)
         # level = 0

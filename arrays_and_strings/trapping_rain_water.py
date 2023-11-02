@@ -8,7 +8,6 @@ class IndexHeight(NamedTuple):
 
 class Solution:
     def trap(self, height: List[int]) -> int:
-
         stack = []
         water = 0
         for index, bar_height in enumerate(height):

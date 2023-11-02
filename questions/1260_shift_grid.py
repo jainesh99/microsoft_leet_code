@@ -3,7 +3,6 @@ from typing import List
 
 class Solution:
     def shiftGrid(self, grid: List[List[int]], k: int) -> List[List[int]]:
-
         num_of_rows = len(grid)
         num_of_columns = len(grid[0])
 
@@ -11,9 +10,7 @@ class Solution:
         temp = []
 
         if k >= num_of_columns:
-
             for _ in range(k // num_of_columns):
-
                 bottom_row = grid.pop(num_of_rows - 1)
                 grid.insert(0, bottom_row)
 

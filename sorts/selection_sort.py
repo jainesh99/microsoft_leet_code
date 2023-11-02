@@ -1,10 +1,8 @@
 def selection_sort(data: list):
-
     for i in range(len(data)):
         smallest_value = data[i]
         smallest_index = i
         for j in range(i + 1, len(data) - i):
-
             if data[j] < smallest_value:
                 smallest_value = data[j]
                 smallest_index = j

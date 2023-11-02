@@ -7,7 +7,6 @@ class ListNode:
 
 class Solution:
     def calculate_sum_and_carry_over(self, val1, val2, carry_over):
-
         sum = val1 + val2 + carry_over
 
         if sum > 9:
@@ -16,7 +15,6 @@ class Solution:
             return sum, 0
 
     def add_first(self, value, result):
-
         temp = ListNode(value)
         temp.next = result
         return temp
@@ -24,7 +22,6 @@ class Solution:
     def addTwoNumbers(
         self, l1: Optional[ListNode], l2: Optional[ListNode]
     ) -> Optional[ListNode]:
-
         stack1, stack2 = [], []
 
         while l1:
@@ -40,7 +37,6 @@ class Solution:
         last = None
 
         while len(stack1) > 0 and len(stack2) > 0:
-
             sum, carry_over = self.calculate_sum_and_carry_over(
                 stack1.pop(), stack2.pop(), carry_over
             )
@@ -51,7 +47,6 @@ class Solution:
                 result = ListNode(sum)
 
         if len(stack1) > 0:
-
             for index in range(len(stack1) - 1, -1, -1):
                 sum, carry_over = self.calculate_sum_and_carry_over(
                     stack1[index], 0, carry_over
@@ -59,7 +54,6 @@ class Solution:
                 result = self.add_first(sum, result)
 
         if len(stack2) > 0:
-
             for index in range(len(stack2) - 1, -1, -1):
                 sum, carry_over = self.calculate_sum_and_carry_over(
                     stack2[index], 0, carry_over

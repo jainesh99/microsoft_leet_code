@@ -1,6 +1,5 @@
 class Solution:
     def is_monochrome(self, string_under_test):
-
         last_index_of_zero = string_under_test.rfind("0")
         last_index_of_one = string_under_test.rfind("1")
 
@@ -18,11 +17,9 @@ class Solution:
         return True
 
     def minFlipsMonoIncr(self, s: str) -> int:
-
         one_count, flip_count = 0, 0
 
         for char in s:
-
             if char == "1":
                 one_count += 1
             else:

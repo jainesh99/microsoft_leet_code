@@ -13,7 +13,6 @@ class Solution:
             string_to_match = str2
 
         for i in range(1, len(chosen_str) + 1):
-
             string_to_test = chosen_str[:i] * (len(string_to_match) // i)
 
             if string_to_test == string_to_match:

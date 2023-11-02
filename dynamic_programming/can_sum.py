@@ -2,7 +2,6 @@ from typing import List
 
 
 def can_sum(target_sum: int, numbers: List[int], memo=None) -> bool:
-
     if memo is None:
         memo = {}
 

@@ -4,7 +4,6 @@ from queue import PriorityQueue
 
 class Solution:
     def reorganizeString(self, s: str) -> str:
-
         if not s:
             return ""
 
@@ -20,7 +19,6 @@ class Solution:
         block = (count + 1, character)
 
         while priority_queue.qsize() > 0:
-
             count, character = priority_queue.get()
             reorganised_string = reorganised_string + character
 

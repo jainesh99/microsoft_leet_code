@@ -7,7 +7,6 @@ class LRUCache:
         self._cache = OrderedDict()
 
     def get(self, key: int) -> int:
-
         if key in self._cache:
             self._cache.move_to_end(key)
             return self._cache[key]
@@ -15,7 +14,6 @@ class LRUCache:
             return -1
 
     def put(self, key: int, value: int) -> None:
-
         self._cache[key] = value
         self._cache.move_to_end(
             key

@@ -9,29 +9,24 @@ class Tree:
         self._root = None
 
     def add(self, data):
-
         if not self._root:
             self._root = Node(data)
         else:
             self._add(data, self._root)
 
     def _add(self, data, node):
-
         if data > node.data:
-
             if not node.right:
                 node.right = Node(data)
             else:
                 self._add(data, node.right)
         else:
-
             if not node.left:
                 node.left = Node(data)
             else:
                 self._add(data, node.left)
 
     def contains(self, data):
-
         if self._root:
             response = self._contains(data, self._root)
             if response:
@@ -42,7 +37,6 @@ class Tree:
             return False
 
     def _contains(self, data, node):
-
         if not node:
             return False
         elif data == node.data:
@@ -56,11 +50,9 @@ class Tree:
     #     # Level order traversal
 
     def remove(self, data):
-
         self._remove(data, self._root)
 
     def _remove(self, data, node):
-
         if node is None:
             return node
 

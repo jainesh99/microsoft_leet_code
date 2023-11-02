@@ -6,7 +6,6 @@ class Solution:
     def get_available_positions(
         self, grid, position, number_of_rows, number_of_columns
     ):
-
         available_positions = []
 
         if position[1] + 1 < number_of_columns:
@@ -28,7 +27,6 @@ class Solution:
         return available_positions
 
     def getFood(self, grid: List[List[str]]) -> int:
-
         num_of_rows = len(grid)
         num_of_columns = len(grid[0])
         start_position = set()
@@ -36,7 +34,6 @@ class Solution:
         visited = {}
 
         for row in range(num_of_rows):
-
             if "*" in grid[row]:
                 start_position = (row, grid[row].index("*"))
                 break
@@ -51,7 +48,6 @@ class Solution:
             )
 
             for position in available_positions:
-
                 if position not in visited.keys():
                     if grid[position[0]][position[1]] == "#":
                         return steps

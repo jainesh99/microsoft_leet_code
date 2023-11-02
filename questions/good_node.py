@@ -8,14 +8,12 @@ class TreeNode:
 
 class Solution:
     def goodNodes(self, root: TreeNode) -> int:
-
         stack = []
         num_of_good_nodes = 0
 
         stack.append((root, root.val))
 
         while len(stack) > 0:
-
             popped_node, max_value_so_far = stack.pop()
 
             if popped_node.val >= max_value_so_far:

@@ -75,7 +75,6 @@ class Solution:
     def mostVisitedPattern(
         self, username: List[str], timestamp: List[int], website: List[str]
     ) -> List[str]:
-
         graph = {}
 
         logs_tuple = sorted(zip(username, timestamp, website))
@@ -101,7 +100,6 @@ class Solution:
         results = {}
 
         for pattern, value in sorted_tuples:
-
             if results.get(value):
                 results[value].append(pattern)
             else:

@@ -2,7 +2,6 @@ from typing import Dict, List
 
 
 def best_sum(target_sum: int, numbers: List[int], memo: [Dict] = None) -> List[int]:
-
     if memo is None:
         memo = {}
 
@@ -18,11 +17,9 @@ def best_sum(target_sum: int, numbers: List[int], memo: [Dict] = None) -> List[i
         return None
 
     for number in numbers:
-
         sum_arr = best_sum(target_sum - number, numbers, memo)
 
         if sum_arr is not None:
-
             sum_arr.append(number)
 
             if shortest_sum is None or len(sum_arr) < len(shortest_sum):

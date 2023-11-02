@@ -7,7 +7,6 @@ class Heap:
         self._arr_heap = []
 
     def add(self, value):
-
         if len(self._arr_heap) == 0:
             self._arr_heap.append(value)
         else:
@@ -16,7 +15,6 @@ class Heap:
             self.trickle_up()
 
     def trickle_up(self):
-
         parent_index = math.floor((self._last_position - 1) / 2)
         child_index = self._last_position
 

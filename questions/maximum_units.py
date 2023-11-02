@@ -4,7 +4,6 @@ from typing import List
 
 class Solution:
     def maximumUnits(self, boxTypes: List[List[int]], truckSize: int) -> int:
-
         sorted_box_types = sorted(boxTypes, key=lambda x: x[1], reverse=True)
         maximum_units = 0
 

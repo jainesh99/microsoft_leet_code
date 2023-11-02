@@ -2,16 +2,13 @@ from typing import List
 
 
 def how_sum(target: int, numbers: List[int]) -> int:
-
     table_length = target + 1
 
     table = [None] * table_length
     table[0] = []
 
     for i in range(table_length):
-
         if table[i] is not None:
-
             for number in numbers:
                 forward_index = i + number
                 if forward_index < table_length:

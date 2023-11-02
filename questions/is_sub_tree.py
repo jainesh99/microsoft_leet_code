@@ -22,7 +22,6 @@ class Solution:
         return self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot)
 
     def sameTree(self, s, t):
-
         if not s and not t:
             return True
         if s and t and s.val == t.val:

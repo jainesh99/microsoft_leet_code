@@ -1,13 +1,10 @@
 def grid_traveler(m: int, n: int) -> int:
-
     grid = [[0] * (n + 1) for i in range(m + 1)]
 
     grid[1][1] = 1
 
     for row in range(m + 1):
-
         for col in range(n + 1):
-
             if col + 1 <= n:
                 grid[row][col + 1] += grid[row][col]
 

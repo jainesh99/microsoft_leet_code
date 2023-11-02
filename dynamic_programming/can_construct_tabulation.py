@@ -3,16 +3,12 @@ from typing import List
 
 
 def can_construct(target: str, word_bank: List[str]) -> bool:
-
     table = [False] * (len(target) + 1)
     table[0] = True
 
     for index, letter in enumerate(target):
-
         if table[index]:
-
             for word in word_bank:
-
                 if target[index : index + len(word)] == word:
                     table[index + len(word)] = True
 

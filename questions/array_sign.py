@@ -3,7 +3,6 @@ from typing import List
 
 class Solution:
     def arraySign(self, nums: List[int]) -> int:
-
         negative_count = 0
 
         for num in nums:

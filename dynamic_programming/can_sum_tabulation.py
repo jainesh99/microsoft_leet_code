@@ -2,20 +2,15 @@ from typing import List
 
 
 def can_sum(target_sum: int, numbers: List[int]) -> bool:
-
     number_of_items = target_sum + 1
 
     table = [False] * number_of_items
     table[0] = True
 
     for i in range(number_of_items):
-
         if table[i]:
-
             for number in numbers:
-
                 if i + number < number_of_items:
-
                     table[i + number] = True
 
     return table[target_sum]

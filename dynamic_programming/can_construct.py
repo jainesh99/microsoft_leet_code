@@ -2,7 +2,6 @@ from typing import Dict, List
 
 
 def can_construct(target: str, wordbank: List[str], memo: Dict = None):
-
     if memo is None:
         memo = {}
 
@@ -13,9 +12,7 @@ def can_construct(target: str, wordbank: List[str], memo: Dict = None):
         return True
 
     for word in wordbank:
-
         if target.startswith(word):
-
             if can_construct(target.replace(word, ""), wordbank, memo):
                 return True
 

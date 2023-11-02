@@ -3,7 +3,6 @@ from typing import Dict
 
 class Solution:
     def climbStairs(self, n: int, memo: Dict = None) -> int:
-
         count = 0
 
         if memo is None:

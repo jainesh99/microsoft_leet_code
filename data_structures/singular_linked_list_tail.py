@@ -11,7 +11,6 @@ class LinkedList:
         self.current_size = 0
 
     def add_first(self, value):
-
         value.next = self.head
         self.head = value
 
@@ -21,7 +20,6 @@ class LinkedList:
         self.current_size += 1
 
     def add_last(self, value):
-
         if self.tail:
             self.tail.next = value
             self.tail = value
@@ -31,7 +29,6 @@ class LinkedList:
             self.tail = value
 
     def remove_first(self):
-
         if self.head == self.tail:
             self.head = self.tail = None
             self.current_size = 0
@@ -43,7 +40,6 @@ class LinkedList:
             return temp
 
     def remove_last(self):
-
         if self.head == self.tail:
             self.head = self.tail = None
             # Can also just return remove_first() has the same effect
@@ -62,7 +58,6 @@ class LinkedList:
             return current.data
 
     def remove(self, value):
-
         if not self.head:
             return None
 
@@ -84,7 +79,6 @@ class LinkedList:
             self.current_size -= 1
 
     def find(self, value):
-
         if not self.head:
             return False
 

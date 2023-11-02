@@ -10,7 +10,6 @@ class LinkedList:
         self.current_size = 0
 
     def add_first(self, value):
-
         value.next = self.head
         self.head = value
 
@@ -31,7 +30,6 @@ class LinkedList:
             # OR can call the self.add_first(value)
 
     def remove_first(self):
-
         if not self.head:
             return None
 
@@ -46,7 +44,6 @@ class LinkedList:
             return None
 
     def remove_last(self):
-
         if not self.head:
             return None
 
@@ -68,7 +65,6 @@ class LinkedList:
             return None
 
     def remove(self, value):
-
         if not self.head:
             return None
 
@@ -87,7 +83,6 @@ class LinkedList:
             self.current_size -= 1
 
     def find(self, value):
-
         if not self.head:
             return False
 
@@ -110,7 +105,6 @@ class LinkedList:
             return None
 
     def peak_last(self):
-
         if self.head:
             temp = self.head
 

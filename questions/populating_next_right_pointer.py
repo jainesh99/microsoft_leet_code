@@ -11,7 +11,6 @@ class Node:
 
 class Solution:
     def connect(self, root: "Optional[Node]") -> "Optional[Node]":
-
         if not root:
             return None
 
@@ -20,13 +19,10 @@ class Solution:
         level = 0
 
         while queue:
-
             number_of_items_needed = 2**level
 
             if len(queue) == number_of_items_needed:
-
                 for index, item in enumerate(queue):
-
                     if index + 1 < len(queue):
                         item.next = queue[index + 1]
                     else:

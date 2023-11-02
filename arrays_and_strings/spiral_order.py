@@ -3,7 +3,6 @@ from typing import List
 
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
-
         m = len(matrix)
         n = len(matrix[0])
 
@@ -15,12 +14,10 @@ class Solution:
         compass = 0
 
         while len(spiral_order) != number_of_items:
-
             if (
                 0 <= position[0] + directions[compass][0] < m
                 and 0 <= position[1] + directions[compass][1] < n
             ):
-
                 new_position = [
                     position[0] + directions[compass][0],
                     position[1] + directions[compass][1],

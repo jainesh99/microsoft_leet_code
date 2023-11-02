@@ -2,7 +2,6 @@ from typing import Dict, List
 
 
 def all_construct(target: str, word_bank: List[str], memo: Dict = None):
-
     if memo is None:
         memo = {}
 
@@ -15,9 +14,7 @@ def all_construct(target: str, word_bank: List[str], memo: Dict = None):
     number_of_ways = []
 
     for word in word_bank:
-
         if target.startswith(word):
-
             value = all_construct(target.removeprefix(word), word_bank)
 
             if len(value) > 0:

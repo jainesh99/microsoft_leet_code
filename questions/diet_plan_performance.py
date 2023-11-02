@@ -40,7 +40,6 @@ class Solution:
             sum_so_far += calorie
 
             if len(window) == k:
-
                 if sum_so_far > upper:
                     performance += 1
                 elif sum_so_far < lower:

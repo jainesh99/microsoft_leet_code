@@ -2,7 +2,6 @@ from typing import Dict, List
 
 
 def count_construct(target: str, word_bank: List[str], memo: Dict = None):
-
     if memo is None:
         memo = {}
 
@@ -15,7 +14,6 @@ def count_construct(target: str, word_bank: List[str], memo: Dict = None):
     count = 0
 
     for word in word_bank:
-
         if target.startswith(word):
             value = count_construct(target.removeprefix(word), word_bank, memo)
             count = count + value

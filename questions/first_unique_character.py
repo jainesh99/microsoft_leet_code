@@ -3,7 +3,6 @@ from collections import Counter, defaultdict
 
 class Solution:
     def firstUniqChar(self, s: str) -> int:
-
         # if len(s) == 1:
         #     return 0
         #

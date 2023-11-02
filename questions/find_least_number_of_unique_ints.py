@@ -4,7 +4,6 @@ from typing import List
 
 class Solution:
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
-
         counter_dict = defaultdict(lambda: 0)
 
         for value in arr:
@@ -18,7 +17,6 @@ class Solution:
         )
 
         while k > 0:
-
             item, count = counter_tuple.pop()
 
             if count > k:

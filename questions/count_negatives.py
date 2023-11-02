@@ -3,13 +3,11 @@ from typing import List
 
 class Solution:
     def countNegatives(self, grid: List[List[int]]) -> int:
-
         count = 0
 
         for row in grid:
             start_of_negative_index = -1
             for index, item in enumerate(row):
-
                 if item < 0:
                     start_of_negative_index = index
                     break

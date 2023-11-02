@@ -10,7 +10,6 @@ class ListNode:
 
 class Solution:
     def swapNodes(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
-
         length_of_ll = 1
         current = head
 

@@ -7,7 +7,6 @@ class Solution:
             result_dictionary = {}
 
             for char in word:
-
                 if char in result_dictionary.keys():
                     result_dictionary[char] += 1
                 else:
@@ -18,12 +17,10 @@ class Solution:
         char_dict = generate_dict(chars)
         counter = 0
         for word in words:
-
             word_dict = generate_dict(word)
             word_list = [char for char in word]
             for key in word_dict.keys():
                 if key in char_dict.keys():
-
                     if word_dict[key] <= char_dict[key]:
                         for i in range(0, word_dict[key]):
                             word_list.remove(key)

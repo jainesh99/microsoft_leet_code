@@ -3,7 +3,6 @@ from typing import List
 
 class Solution:
     def reorderLogFiles(self, logs: List[str]) -> List[str]:
-
         digit_logs = []
         letter_logs = []
 

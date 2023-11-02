@@ -4,7 +4,6 @@ from typing import List
 
 class Solution:
     def subArrayRanges(self, nums: List[int]) -> int:
-
         # sum_array_ranges = max(nums) - min(nums)
         #
         # for step in range(2, len(nums)):
@@ -21,13 +20,11 @@ class Solution:
         sum_array_ranges = 0
 
         for i in range(len(nums)):
-
             min_heap, max_heap = [], []
             heappush(min_heap, nums[i])
             heappush(max_heap, -nums[i])
 
             for j in range(i + 1, len(nums)):
-
                 heappush(min_heap, nums[j])
                 heappush(max_heap, -nums[j])
 

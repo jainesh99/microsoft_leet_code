@@ -4,7 +4,6 @@ from typing import List
 
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
-
         answer = 0
 
         def generate_next_cells(row, column):

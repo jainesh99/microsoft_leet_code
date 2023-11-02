@@ -3,7 +3,6 @@ from typing import List
 
 class Solution:
     def maxProduct_brute_force(self, nums: List[int]) -> int:
-
         if len(nums) == 1:
             return nums[0]
 
@@ -18,7 +17,6 @@ class Solution:
             new_max_product = nums[index]
 
             for new_index in range(index + 1, len(nums)):
-
                 new_max_product = new_max_product * nums[new_index]
 
                 if new_max_product > max_product:
